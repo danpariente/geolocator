@@ -4,7 +4,8 @@ module Api
       def create
         location = Location.new(location_params)
 
-        if location.save
+        if location.valid?
+          GeocodeJob.perform_later(location_params)
           render json: location, status: :created
         else
           render json: errors(location), status: :unprocessable_entity
