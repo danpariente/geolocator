@@ -6,13 +6,17 @@ module Api
 
         if location.valid?
           GeocodeJob.perform_later(location_params)
-          render json: location, status: :created
+          render json: serializer(location), status: :created
         else
           render json: errors(location), status: :unprocessable_entity
         end
       end
 
       private
+
+      def serializer(location)
+        LocationSerializer.new(location).serialized_json
+      end
 
       def errors(location)
         {

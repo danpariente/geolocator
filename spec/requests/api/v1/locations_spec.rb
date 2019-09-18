@@ -8,9 +8,9 @@ RSpec.describe "POST /api/v1/locations" do
     post "/api/v1/locations", params: { location: location_params }
 
     expect(response.status).to eq(201)
-    expect(json_body["id"]).to eq(id)
-    expect(json_body["name"]).to eq(location_params[:name])
-    expect(json_body["lonlat"]).to eq(location_params[:lonlat])
+
+    location_json = json_body["data"]
+    expect(location_json["id"]).to eq(id)
   end
 
   context "when there are invalid attributes" do
