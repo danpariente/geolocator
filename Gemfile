@@ -27,4 +27,5 @@ group :test do
   gem "factory_bot_rails"
   gem "shoulda-matchers", require: false
   gem "simplecov", require: false
+  gem "webmock", require: false
 end
