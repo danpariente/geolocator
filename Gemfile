@@ -5,6 +5,7 @@ ruby "2.6.3"
 
 gem "activerecord-postgis-adapter", "~> 6.0.0"
 gem "bootsnap", ">= 1.4.2", require: false
+gem "fast_jsonapi", "~> 1.5"
 gem "geocoder", "~> 1.5.1"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
