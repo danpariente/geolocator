@@ -10,7 +10,7 @@ gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
 gem "rack-cors", "~> 1.0.3"
 gem "rails", "~> 6.0.0"
-gem "sidekiq", "~> 5.2.7"
+gem "sidekiq", "~> 6.4.0"
 
 group :development, :test do
   gem "byebug", platforms: :mri
